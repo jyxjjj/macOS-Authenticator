@@ -1,0 +1,28 @@
+# Xcode build artifacts
+build/
+DerivedData/
+*.xcuserstate
+*.xcuserdatad/
+xcuserdata/
+*.xcworkspace/xcuserdata/
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Swift Package Manager
+.build/
+.swiftpm/
+
+# Dist
+dist/
+
+# Credentials
+*.p12
+*.cer
+*.mobileprovision
+
+# Xcode auto-generated
+*~.nib
+*.self

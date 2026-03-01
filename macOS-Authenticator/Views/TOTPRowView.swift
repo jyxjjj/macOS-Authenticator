@@ -108,8 +108,8 @@ struct TOTPRowView: View {
 
     private func startTimer() {
         refreshCode()
-        refreshTimer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { _ in
-            Task { @MainActor in self.refreshCode() }
+        refreshTimer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { [self] _ in
+            DispatchQueue.main.async { self.refreshCode() }
         }
     }
 

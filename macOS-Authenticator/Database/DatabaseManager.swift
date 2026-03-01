@@ -194,12 +194,15 @@ final class DatabaseManager {
     }
 
     private func bindText(_ stmt: OpaquePointer?, _ idx: Int32, _ value: String) {
-        sqlite3_bind_text(stmt, idx, (value as NSString).utf8String, -1, nil)
+        // SQLITE_TRANSIENT (-1) tells SQLite to copy the string immediately
+        sqlite3_bind_text(stmt, idx, value, -1, unsafeBitCast(-1, to: sqlite3_destructor_type.self))
     }
 
     private func bindBlob(_ stmt: OpaquePointer?, _ idx: Int32, _ value: Data) {
-        _ = value.withUnsafeBytes { ptr in
-            sqlite3_bind_blob(stmt, idx, ptr.baseAddress, Int32(value.count), nil)
+        // SQLITE_TRANSIENT ensures SQLite copies the blob before we release the Data buffer
+        value.withUnsafeBytes { ptr in
+            sqlite3_bind_blob(stmt, idx, ptr.baseAddress, Int32(value.count),
+                              unsafeBitCast(-1, to: sqlite3_destructor_type.self))
         }
     }
 
