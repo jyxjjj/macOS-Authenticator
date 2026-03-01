@@ -97,7 +97,7 @@ struct ExportDocument: FileDocument {
 
     private var exportData: Data?
 
-    init(appState: AppState) {
+    @MainActor init(appState: AppState) {
         exportData = try? appState.exportData()
     }
 
