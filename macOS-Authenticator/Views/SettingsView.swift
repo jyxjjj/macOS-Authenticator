@@ -32,7 +32,7 @@ struct SettingsView: View {
 
                 Section("About") {
                     LabeledContent("App",       value: "macOS Authenticator")
-                    LabeledContent("Version",   value: "1.0.0")
+                    LabeledContent("Version",   value: Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String ?? "1.0.0")
                     LabeledContent("License",   value: "AGPL-3.0")
                     LabeledContent("Bundle ID", value: "com.desmg.nacos.authenticator")
                 }
