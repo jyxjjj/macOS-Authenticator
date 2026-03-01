@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "AA000000000000000000A020"
+               BlueprintIdentifier = "019CAA30FAC874A18809DADB5B9FAF77"
                BuildableName = "macOS-Authenticator.app"
                BlueprintName = "macOS-Authenticator"
                ReferencedContainer = "container:macOS-Authenticator.xcodeproj">
@@ -28,7 +28,7 @@
             buildForAnalyzing = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "AA000000000000000000A021"
+               BlueprintIdentifier = "019CAA30FAC97A2982FE3D966540E133"
                BuildableName = "macOS-AuthenticatorTests.xctest"
                BlueprintName = "macOS-AuthenticatorTests"
                ReferencedContainer = "container:macOS-Authenticator.xcodeproj">
@@ -47,7 +47,7 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "AA000000000000000000A021"
+               BlueprintIdentifier = "019CAA30FAC97A2982FE3D966540E133"
                BuildableName = "macOS-AuthenticatorTests.xctest"
                BlueprintName = "macOS-AuthenticatorTests"
                ReferencedContainer = "container:macOS-Authenticator.xcodeproj">
@@ -69,7 +69,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "AA000000000000000000A020"
+            BlueprintIdentifier = "019CAA30FAC874A18809DADB5B9FAF77"
             BuildableName = "macOS-Authenticator.app"
             BlueprintName = "macOS-Authenticator"
             ReferencedContainer = "container:macOS-Authenticator.xcodeproj">
@@ -86,7 +86,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "AA000000000000000000A020"
+            BlueprintIdentifier = "019CAA30FAC874A18809DADB5B9FAF77"
             BuildableName = "macOS-Authenticator.app"
             BlueprintName = "macOS-Authenticator"
             ReferencedContainer = "container:macOS-Authenticator.xcodeproj">

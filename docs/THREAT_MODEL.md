@@ -52,7 +52,7 @@
 
 ### T4 — Export file theft
 
-**Threat:** Attacker obtains a `.nacosauth` export file.
+**Threat:** Attacker obtains a `.macosauth` export file.
 
 **Mitigation:** The file is AES-256-GCM encrypted with the master key. Without the master key it cannot be decrypted or modified (GCM authentication tag prevents undetected tampering).
 

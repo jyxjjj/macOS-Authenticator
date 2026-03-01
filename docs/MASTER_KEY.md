@@ -50,7 +50,7 @@ Calling `AppState.lock()`:
 
 ```swift
 kSecClass:          kSecClassGenericPassword
-kSecAttrService:    "com.desmg.nacos.authenticator"
+kSecAttrService:    "com.desmg.macos.authenticator"
 kSecAttrAccount:    "master-key"
 kSecAttrAccessible: kSecAttrAccessibleWhenUnlockedThisDeviceOnly
 ```

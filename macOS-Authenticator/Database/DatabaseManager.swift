@@ -9,7 +9,7 @@ final class DatabaseManager {
         let appSupport = FileManager.default
             .urls(for: .applicationSupportDirectory, in: .userDomainMask)
             .first!
-            .appendingPathComponent("com.desmg.nacos.authenticator", isDirectory: true)
+            .appendingPathComponent("com.desmg.macos.authenticator", isDirectory: true)
         try? FileManager.default.createDirectory(at: appSupport,
                                                  withIntermediateDirectories: true)
         dbURL = appSupport.appendingPathComponent("entries.db")

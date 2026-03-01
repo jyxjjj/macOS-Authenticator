@@ -55,7 +55,7 @@ Pure static struct wrapping `CryptoKit.AES.GCM`. Each encrypt call generates a f
 Static struct using `Security.framework` `SecItem*` APIs. Stores a single 32-byte master key under `kSecClassGenericPassword` with `kSecAttrAccessibleWhenUnlockedThisDeviceOnly`.
 
 ### DatabaseManager
-`final class DatabaseManager`. Opens/creates `~/Library/Application Support/com.desmg.nacos.authenticator/entries.db`. All secrets are stored as encrypted blobs; the database never holds plaintext. `replaceAll()` uses a SQLite transaction for atomic key rotation.
+`final class DatabaseManager`. Opens/creates `~/Library/Application Support/com.desmg.macos.authenticator/entries.db`. All secrets are stored as encrypted blobs; the database never holds plaintext. `replaceAll()` uses a SQLite transaction for atomic key rotation.
 
 ## Data Flow
 

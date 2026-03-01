@@ -63,4 +63,4 @@ See [docs/SECURITY.md](docs/SECURITY.md) for the security model and [docs/THREAT
 
 [AGPL-3.0](LICENSE)
 
-**Bundle ID:** `com.desmg.nacos.authenticator`
+**Bundle ID:** `com.desmg.macos.authenticator`

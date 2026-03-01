@@ -60,7 +60,7 @@ struct ExportImportView: View {
         .fileExporter(isPresented: $showExport,
                       document: ExportDocument(appState: appState),
                       contentType: .data,
-                      defaultFilename: "authenticator-backup.nacosauth") { result in
+                      defaultFilename: "authenticator-backup.macosauth") { result in
             switch result {
             case .success:         message = "Export successful";         isSuccess = true
             case .failure(let e):  message = e.localizedDescription;      isSuccess = false

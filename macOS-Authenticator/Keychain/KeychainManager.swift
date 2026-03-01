@@ -2,7 +2,7 @@ import Foundation
 import Security
 
 struct KeychainManager {
-    private static let service       = "com.desmg.nacos.authenticator"
+    private static let service       = "com.desmg.macos.authenticator"
     private static let masterKeyAcct = "master-key"
 
     static func saveMasterKey(_ keyData: Data) throws {
