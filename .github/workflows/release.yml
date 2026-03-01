@@ -1,0 +1,71 @@
+name: Build and Release
+
+on:
+  push:
+    branches: [main]
+    tags: ['v*']
+  pull_request:
+    branches: [main]
+
+jobs:
+  build-and-test:
+    runs-on: macos-14
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Select Xcode
+        run: sudo xcode-select -s /Applications/Xcode.app
+
+      - name: Build
+        run: |
+          xcodebuild build \
+            -project macOS-Authenticator.xcodeproj \
+            -scheme macOS-Authenticator \
+            -configuration Release \
+            CODE_SIGN_IDENTITY="" \
+            CODE_SIGNING_REQUIRED=NO \
+            CODE_SIGNING_ALLOWED=NO
+
+      - name: Test
+        run: |
+          xcodebuild test \
+            -project macOS-Authenticator.xcodeproj \
+            -scheme macOS-AuthenticatorTests \
+            -configuration Debug \
+            -destination 'platform=macOS' \
+            CODE_SIGN_IDENTITY="" \
+            CODE_SIGNING_REQUIRED=NO \
+            CODE_SIGNING_ALLOWED=NO
+
+      - name: Create DMG (on tag)
+        if: startsWith(github.ref, 'refs/tags/')
+        run: |
+          APP_PATH=$(find ~/Library/Developer/Xcode/DerivedData \
+            -name "macOS-Authenticator.app" -type d 2>/dev/null | head -1)
+          if [ -z "$APP_PATH" ]; then
+            APP_PATH=$(find . -name "macOS-Authenticator.app" -type d 2>/dev/null | head -1)
+          fi
+          mkdir -p dist
+          cp -r "$APP_PATH" dist/
+          # Ad-hoc sign the app
+          codesign --force --deep --sign - "dist/macOS-Authenticator.app" || true
+          hdiutil create \
+            -volname "macOS-Authenticator" \
+            -srcfolder dist \
+            -ov -format UDZO \
+            dist/macOS-Authenticator.dmg
+
+      - name: Upload DMG artifact
+        if: startsWith(github.ref, 'refs/tags/')
+        uses: actions/upload-artifact@v4
+        with:
+          name: macOS-Authenticator-DMG
+          path: dist/macOS-Authenticator.dmg
+
+      - name: Release
+        if: startsWith(github.ref, 'refs/tags/')
+        uses: softprops/action-gh-release@v2
+        with:
+          files: dist/macOS-Authenticator.dmg
+          generate_release_notes: true
