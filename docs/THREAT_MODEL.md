@@ -3,7 +3,7 @@
 ## Assets
 
 | Asset | Value |
-|---|---|
+| --- | --- |
 | TOTP secrets (Base32) | High — allows generating valid OTP codes |
 | Service names / usernames | Medium — reveals which services the user protects |
 | Master password | Critical — controls access to all secrets |
@@ -12,7 +12,7 @@
 ## Threat Actors
 
 | Actor | Capability |
-|---|---|
+| --- | --- |
 | Passive filesystem observer | Read-only access to `~/Library/Application Support/...` |
 | Local attacker (same user session) | Full user-space access, memory inspection |
 | Malicious app | Sandboxed apps cannot read other apps' Keychain items |
@@ -84,7 +84,7 @@
 
 **Threat:** The build process is compromised and a backdoored binary is distributed.
 
-**Mitigation:** GitHub Actions workflow builds from source on a fresh `macos-14` runner on every push. Releases are created directly from CI artifacts. All source is AGPL-3.0 and auditable.
+**Mitigation:** GitHub Actions workflow builds from source on a fresh `macos-26` runner on every push. Releases are created directly from CI artifacts. All source is AGPL-3.0 and auditable.
 
 **Residual risk:** Low, assuming GitHub Actions infrastructure is not compromised.
 

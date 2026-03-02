@@ -3,7 +3,7 @@
 ## Trust Boundaries
 
 | Boundary | Description |
-|---|---|
+| --- | --- |
 | User ↔ App | Master password entered at unlock |
 | App ↔ Keychain | 32-byte master key stored via Security framework |
 | App ↔ SQLite | Only ciphertext+nonce stored; plaintext never written |
@@ -13,11 +13,12 @@
 
 The master key is a 32-byte value derived from the user's master password via SHA-256:
 
-```
+```plain
 masterKey = SHA256(UTF8(password))   →   SymmetricKey(32 bytes)
 ```
 
 The derived key is stored in the macOS Keychain under `kSecAttrAccessibleWhenUnlockedThisDeviceOnly`, meaning it is:
+
 - Encrypted by the macOS Secure Enclave/Data Protection key
 - Only accessible when the device is unlocked
 - Not backed up to iCloud or transferred to other devices
@@ -28,7 +29,7 @@ The key is **never written to disk** in any other form. In memory it exists only
 
 Each TOTP secret is individually encrypted with AES-256-GCM before being written to SQLite:
 
-```
+```plain
 plainSecret (bytes from Base32 decode)
   → AES.GCM.seal(plainSecret, key: masterKey, nonce: random12Bytes)
   → encryptedSecret (ciphertext + 16-byte authentication tag)
@@ -41,7 +42,7 @@ The authentication tag guarantees that any tampering with the database is detect
 
 Export files use the same master key and AES-256-GCM:
 
-```
+```plain
 File = nonce(12 bytes) || AES-GCM(JSON payload, masterKey, nonce)
 ```
 

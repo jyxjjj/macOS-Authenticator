@@ -4,7 +4,7 @@
 
 The master key is derived from the user's master password on every unlock:
 
-```
+```plain
 masterKey = SymmetricKey(data: SHA256(UTF8(password)))
 ```
 
@@ -29,6 +29,7 @@ This is a **deterministic** operation — the same password always produces the 
 ## Lock
 
 Calling `AppState.lock()`:
+
 - Sets `masterKey = nil` (the `SymmetricKey` value is dropped; CryptoKit zeroes the backing memory)
 - Sets `isLocked = true`
 - Clears `entries = []`
@@ -56,6 +57,7 @@ kSecAttrAccessible: kSecAttrAccessibleWhenUnlockedThisDeviceOnly
 ```
 
 `kSecAttrAccessibleWhenUnlockedThisDeviceOnly` means:
+
 - The item is only accessible while the Mac is unlocked.
 - The item is **not** included in iCloud Keychain sync or device backups.
 - Migrating to a new Mac requires re-entering the master password and re-importing entries.

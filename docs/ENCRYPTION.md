@@ -13,7 +13,7 @@
 ### Per-entry (SQLite columns)
 
 | Column | Content |
-|---|---|
+| --- | --- |
 | `encrypted_secret` | ciphertext \|\| tag (variable length + 16 bytes) |
 | `nonce` | 12-byte random nonce |
 
@@ -21,7 +21,7 @@ The nonce is stored separately so it can be fetched alongside the ciphertext wit
 
 ### Export File
 
-```
+```plain
 Offset  Length  Content
 0       12      Random AES-GCM nonce
 12      N       AES-GCM ciphertext (JSON payload) + 16-byte tag

@@ -13,12 +13,12 @@ A native macOS TOTP (Time-based One-Time Password) authenticator application bui
 - **Export / Import** — AES-256-GCM encrypted backup files
 - **otpauth:// URI parsing** — Scan/paste URI links from other authenticators
 - **Auto-refresh** — Live countdown timer updates codes every second
-- **macOS 14.0+ (Sonoma)**
+- **macOS 26.3+ (Tahoe)**
 
 ## Requirements
 
-- macOS 14.0 (Sonoma) or later
-- Xcode 15.3 or later (for building from source)
+- macOS 26.3 (Tahoe) or later
+- Xcode 26.3 or later (for building from source)
 
 ## Building
 
