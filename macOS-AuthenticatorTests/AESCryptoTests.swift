@@ -91,16 +91,17 @@ final class AESCryptoTests: XCTestCase {
 }
 
 // Equatable conformance for test comparisons
-extension AESCryptoManager.CryptoError: Equatable {
+extension AESCryptoManager.CryptoError {
     public static func == (lhs: Self, rhs: Self) -> Bool {
         switch (lhs, rhs) {
-        case (.encryptionFailed,      .encryptionFailed),
-             (.decryptionFailed,      .decryptionFailed),
-             (.invalidNonce,          .invalidNonce),
-             (.invalidKeySize,        .invalidKeySize),
+        case (.encryptionFailed, .encryptionFailed),
+             (.decryptionFailed, .decryptionFailed),
+             (.invalidNonce, .invalidNonce),
+             (.invalidKeySize, .invalidKeySize),
              (.authenticationFailure, .authenticationFailure):
             return true
-        default: return false
+        default:
+            return false
         }
     }
 }
