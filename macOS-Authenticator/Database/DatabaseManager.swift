@@ -147,7 +147,7 @@ final class DatabaseManager {
             for entry in entries { try insert(entry) }
             try exec("COMMIT;")
         } catch {
-            try? exec("ROLLBACK;")
+            try exec("ROLLBACK;")
             throw error
         }
     }
@@ -200,7 +200,7 @@ final class DatabaseManager {
 
     private func bindBlob(_ stmt: OpaquePointer?, _ idx: Int32, _ value: Data) {
         // SQLITE_TRANSIENT ensures SQLite copies the blob before we release the Data buffer
-        value.withUnsafeBytes { ptr in
+        value.withUnsafeBytes { ptr -> Void in
             sqlite3_bind_blob(stmt, idx, ptr.baseAddress, Int32(value.count),
                               unsafeBitCast(-1, to: sqlite3_destructor_type.self))
         }
