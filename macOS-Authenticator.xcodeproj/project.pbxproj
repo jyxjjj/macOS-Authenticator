@@ -1,0 +1,580 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		019CAA30FAF57AD08148B53DB1DDBD69 /* macOS_AuthenticatorApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019CAA30FAE078F18BD638D1BA794AD7 /* macOS_AuthenticatorApp.swift */; };
+		019CAA30FAF671E98AD85D0AA3DE3EA5 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019CAA30FAE175398470557B44133D14 /* AppState.swift */; };
+		019CAA30FAF87B7281D96EE29074CFD0 /* TOTPEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019CAA30FAE2709E8B2F5607497DD6AA /* TOTPEntry.swift */; };
+		019CAA30FAF971FB80569290B455F0A8 /* TOTPEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019CAA30FAE37F6C85754E40410F2B20 /* TOTPEngine.swift */; };
+		019CAA30FAFA72638E521057CEB6DD02 /* Base32Decoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019CAA30FAE4714580A91E5B09DA36F3 /* Base32Decoder.swift */; };
+		019CAA30FAFB730A8ACA3A45791F4917 /* AESCryptoManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019CAA30FAE57D268A1DC40E591B0F11 /* AESCryptoManager.swift */; };
+		019CAA30FAFC72E28E260877809439DB /* KeychainManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019CAA30FAE6721B82E23F05D50ED57E /* KeychainManager.swift */; };
+		019CAA30FAFD747187075963A5F9F606 /* DatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019CAA30FAE8708588CF4DA55DB33ADC /* DatabaseManager.swift */; };
+		019CAA30FAFE793F8B8B7AFBD64C8F35 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019CAA30FAE97CED8C8A6F4217ACD11B /* ContentView.swift */; };
+		019CAA30FAFF79FD88767ECC3E8BFA9C /* MasterPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019CAA30FAEA7CAD80D980239E418128 /* MasterPasswordView.swift */; };
+		019CAA30FB00767585793EBE39546BDA /* TOTPListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019CAA30FAEB76188FCB7503A64F1A44 /* TOTPListView.swift */; };
+		019CAA30FB01798F8F6B5EB3D65C2FA9 /* TOTPRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019CAA30FAEC72DB84BFAD767F74EC77 /* TOTPRowView.swift */; };
+		019CAA30FB0275EF8B608C3502143248 /* AddEntryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019CAA30FAED7647891814269E738C2F /* AddEntryView.swift */; };
+		019CAA30FB0375228061876F285EB347 /* EditEntryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019CAA30FAEE7876842CAD411441ACEC /* EditEntryView.swift */; };
+		019CAA30FB0474D081C0B8A943CB329A /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019CAA30FAEF702586BAC074E5F7C17F /* SettingsView.swift */; };
+		019CAA30FB05779B84D256E660AA2229 /* ExportImportView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019CAA30FAF071D08CC57E07440C529F /* ExportImportView.swift */; };
+		019CAA30FB0672888620F240F0CA57ED /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 019CAA30FADF7A268FE5C8170E7C6661 /* Assets.xcassets */; };
+		019CAA30FB08720D84E26CCB63E94BED /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 019CAA30FAF4704083C343E233888EBF /* Security.framework */; };
+		019CAA30FB097103825145877FC0B4B6 /* TOTPEngineTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019CAA30FAF178438CC7D06BDA16428A /* TOTPEngineTests.swift */; };
+		019CAA30FB0A7DD48B6BA69D672FE145 /* AESCryptoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019CAA30FAF2734886128D7B91AB56E7 /* AESCryptoTests.swift */; };
+		019CAA30FB0B751180109DBE69B4810E /* MasterKeyChangeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019CAA30FAF37AFD819D23EC0CDBADD6 /* MasterKeyChangeTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		019CAA30FADB7B9288300EA3B494EF0F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 019CAA30FABA736F8A0F9146671FD9E4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 019CAA30FAC874A18809DADB5B9FAF77;
+			remoteInfo = "macOS-Authenticator";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		019CAA30FACA752B86AD8E89F62A8A3F /* macOS-Authenticator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "macOS-Authenticator.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		019CAA30FACB740D82381B14384867FA /* macOS-AuthenticatorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "macOS-AuthenticatorTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		019CAA30FADD7DD68D0F3D87903C3F44 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		019CAA30FADE79F08C5D658E1086F2A5 /* macOS-Authenticator.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "macOS-Authenticator.entitlements"; sourceTree = "<group>"; };
+		019CAA30FADF7A268FE5C8170E7C6661 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		019CAA30FAE078F18BD638D1BA794AD7 /* macOS_AuthenticatorApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = macOS_AuthenticatorApp.swift; sourceTree = "<group>"; };
+		019CAA30FAE175398470557B44133D14 /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
+		019CAA30FAE2709E8B2F5607497DD6AA /* TOTPEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TOTPEntry.swift; sourceTree = "<group>"; };
+		019CAA30FAE37F6C85754E40410F2B20 /* TOTPEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TOTPEngine.swift; sourceTree = "<group>"; };
+		019CAA30FAE4714580A91E5B09DA36F3 /* Base32Decoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Base32Decoder.swift; sourceTree = "<group>"; };
+		019CAA30FAE57D268A1DC40E591B0F11 /* AESCryptoManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AESCryptoManager.swift; sourceTree = "<group>"; };
+		019CAA30FAE6721B82E23F05D50ED57E /* KeychainManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainManager.swift; sourceTree = "<group>"; };
+		019CAA30FAE8708588CF4DA55DB33ADC /* DatabaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseManager.swift; sourceTree = "<group>"; };
+		019CAA30FAE97CED8C8A6F4217ACD11B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		019CAA30FAEA7CAD80D980239E418128 /* MasterPasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterPasswordView.swift; sourceTree = "<group>"; };
+		019CAA30FAEB76188FCB7503A64F1A44 /* TOTPListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TOTPListView.swift; sourceTree = "<group>"; };
+		019CAA30FAEC72DB84BFAD767F74EC77 /* TOTPRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TOTPRowView.swift; sourceTree = "<group>"; };
+		019CAA30FAED7647891814269E738C2F /* AddEntryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEntryView.swift; sourceTree = "<group>"; };
+		019CAA30FAEE7876842CAD411441ACEC /* EditEntryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditEntryView.swift; sourceTree = "<group>"; };
+		019CAA30FAEF702586BAC074E5F7C17F /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		019CAA30FAF071D08CC57E07440C529F /* ExportImportView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExportImportView.swift; sourceTree = "<group>"; };
+		019CAA30FAF178438CC7D06BDA16428A /* TOTPEngineTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TOTPEngineTests.swift; sourceTree = "<group>"; };
+		019CAA30FAF2734886128D7B91AB56E7 /* AESCryptoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AESCryptoTests.swift; sourceTree = "<group>"; };
+		019CAA30FAF37AFD819D23EC0CDBADD6 /* MasterKeyChangeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterKeyChangeTests.swift; sourceTree = "<group>"; };
+		019CAA30FAF4704083C343E233888EBF /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		019CAA30FACD7CAE8F91180E2ABEB769 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				019CAA30FB08720D84E26CCB63E94BED /* Security.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		019CAA30FAD077C98CF27FCE5BBBCD66 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		019CAA30FABC7E808EBF734AAE704E4F = {
+			isa = PBXGroup;
+			children = (
+				019CAA30FABF7BEA8AC84BC66F2032DE /* macOS-Authenticator */,
+				019CAA30FAC67F3687041C29E3DC601E /* macOS-AuthenticatorTests */,
+				019CAA30FABE767B8BE5555E167D25F9 /* Frameworks */,
+				019CAA30FABD7B1381805933370A5356 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		019CAA30FABD7B1381805933370A5356 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				019CAA30FACA752B86AD8E89F62A8A3F /* macOS-Authenticator.app */,
+				019CAA30FACB740D82381B14384867FA /* macOS-AuthenticatorTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		019CAA30FABE767B8BE5555E167D25F9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				019CAA30FAF4704083C343E233888EBF /* Security.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		019CAA30FABF7BEA8AC84BC66F2032DE /* macOS-Authenticator */ = {
+			isa = PBXGroup;
+			children = (
+				019CAA30FAE078F18BD638D1BA794AD7 /* macOS_AuthenticatorApp.swift */,
+				019CAA30FAE175398470557B44133D14 /* AppState.swift */,
+				019CAA30FADD7DD68D0F3D87903C3F44 /* Info.plist */,
+				019CAA30FADE79F08C5D658E1086F2A5 /* macOS-Authenticator.entitlements */,
+				019CAA30FADF7A268FE5C8170E7C6661 /* Assets.xcassets */,
+				019CAA30FAC0789E8718C83206EDDAAB /* Models */,
+				019CAA30FAC170CB8BC859154E27788C /* TOTP */,
+				019CAA30FAC270528EF723D525F04A25 /* Crypto */,
+				019CAA30FAC37F2F863F78D0994EFA4A /* Keychain */,
+				019CAA30FAC4718982211661A5EDFA51 /* Database */,
+				019CAA30FAC577838F8662639D92D35C /* Views */,
+			);
+			path = "macOS-Authenticator";
+			sourceTree = "<group>";
+		};
+		019CAA30FAC0789E8718C83206EDDAAB /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				019CAA30FAE2709E8B2F5607497DD6AA /* TOTPEntry.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		019CAA30FAC170CB8BC859154E27788C /* TOTP */ = {
+			isa = PBXGroup;
+			children = (
+				019CAA30FAE37F6C85754E40410F2B20 /* TOTPEngine.swift */,
+				019CAA30FAE4714580A91E5B09DA36F3 /* Base32Decoder.swift */,
+			);
+			path = TOTP;
+			sourceTree = "<group>";
+		};
+		019CAA30FAC270528EF723D525F04A25 /* Crypto */ = {
+			isa = PBXGroup;
+			children = (
+				019CAA30FAE57D268A1DC40E591B0F11 /* AESCryptoManager.swift */,
+			);
+			path = Crypto;
+			sourceTree = "<group>";
+		};
+		019CAA30FAC37F2F863F78D0994EFA4A /* Keychain */ = {
+			isa = PBXGroup;
+			children = (
+				019CAA30FAE6721B82E23F05D50ED57E /* KeychainManager.swift */,
+			);
+			path = Keychain;
+			sourceTree = "<group>";
+		};
+		019CAA30FAC4718982211661A5EDFA51 /* Database */ = {
+			isa = PBXGroup;
+			children = (
+				019CAA30FAE8708588CF4DA55DB33ADC /* DatabaseManager.swift */,
+			);
+			path = Database;
+			sourceTree = "<group>";
+		};
+		019CAA30FAC577838F8662639D92D35C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				019CAA30FAE97CED8C8A6F4217ACD11B /* ContentView.swift */,
+				019CAA30FAEA7CAD80D980239E418128 /* MasterPasswordView.swift */,
+				019CAA30FAEB76188FCB7503A64F1A44 /* TOTPListView.swift */,
+				019CAA30FAEC72DB84BFAD767F74EC77 /* TOTPRowView.swift */,
+				019CAA30FAED7647891814269E738C2F /* AddEntryView.swift */,
+				019CAA30FAEE7876842CAD411441ACEC /* EditEntryView.swift */,
+				019CAA30FAEF702586BAC074E5F7C17F /* SettingsView.swift */,
+				019CAA30FAF071D08CC57E07440C529F /* ExportImportView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		019CAA30FAC67F3687041C29E3DC601E /* macOS-AuthenticatorTests */ = {
+			isa = PBXGroup;
+			children = (
+				019CAA30FAF178438CC7D06BDA16428A /* TOTPEngineTests.swift */,
+				019CAA30FAF2734886128D7B91AB56E7 /* AESCryptoTests.swift */,
+				019CAA30FAF37AFD819D23EC0CDBADD6 /* MasterKeyChangeTests.swift */,
+			);
+			path = "macOS-AuthenticatorTests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		019CAA30FAC874A18809DADB5B9FAF77 /* macOS-Authenticator */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 019CAA30FAD27C4A8BF0A50DE6170EC1 /* Build configuration list for PBXNativeTarget "macOS-Authenticator" */;
+			buildPhases = (
+				019CAA30FACC77B28C08F5A7EF5F7879 /* Sources */,
+				019CAA30FACD7CAE8F91180E2ABEB769 /* Frameworks */,
+				019CAA30FACE76D58ABF8555EB3B3F93 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "macOS-Authenticator";
+			productName = "macOS-Authenticator";
+			productReference = 019CAA30FACA752B86AD8E89F62A8A3F /* macOS-Authenticator.app */;
+			productType = "com.apple.product-type.application";
+		};
+		019CAA30FAC97A2982FE3D966540E133 /* macOS-AuthenticatorTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 019CAA30FAD3766A868967600EF39D27 /* Build configuration list for PBXNativeTarget "macOS-AuthenticatorTests" */;
+			buildPhases = (
+				019CAA30FACF72E184AFD81A2EE9FFEB /* Sources */,
+				019CAA30FAD077C98CF27FCE5BBBCD66 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				019CAA30FADC74B282432827F3E09876 /* PBXTargetDependency */,
+			);
+			name = "macOS-AuthenticatorTests";
+			productName = "macOS-AuthenticatorTests";
+			productReference = 019CAA30FACB740D82381B14384867FA /* macOS-AuthenticatorTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		019CAA30FABA736F8A0F9146671FD9E4 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1530;
+				LastUpgradeCheck = 2630;
+				TargetAttributes = {
+					019CAA30FAC874A18809DADB5B9FAF77 = {
+						CreatedOnToolsVersion = 15.3;
+					};
+					019CAA30FAC97A2982FE3D966540E133 = {
+						CreatedOnToolsVersion = 15.3;
+						TestTargetID = 019CAA30FAC874A18809DADB5B9FAF77;
+					};
+				};
+			};
+			buildConfigurationList = 019CAA30FAD176908EAD84BC01F9ED42 /* Build configuration list for PBXProject "macOS-Authenticator" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 019CAA30FABC7E808EBF734AAE704E4F;
+			productRefGroup = 019CAA30FABD7B1381805933370A5356 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				019CAA30FAC874A18809DADB5B9FAF77 /* macOS-Authenticator */,
+				019CAA30FAC97A2982FE3D966540E133 /* macOS-AuthenticatorTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		019CAA30FACE76D58ABF8555EB3B3F93 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				019CAA30FB0672888620F240F0CA57ED /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		019CAA30FACC77B28C08F5A7EF5F7879 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				019CAA30FAF57AD08148B53DB1DDBD69 /* macOS_AuthenticatorApp.swift in Sources */,
+				019CAA30FAF671E98AD85D0AA3DE3EA5 /* AppState.swift in Sources */,
+				019CAA30FAF87B7281D96EE29074CFD0 /* TOTPEntry.swift in Sources */,
+				019CAA30FAF971FB80569290B455F0A8 /* TOTPEngine.swift in Sources */,
+				019CAA30FAFA72638E521057CEB6DD02 /* Base32Decoder.swift in Sources */,
+				019CAA30FAFB730A8ACA3A45791F4917 /* AESCryptoManager.swift in Sources */,
+				019CAA30FAFC72E28E260877809439DB /* KeychainManager.swift in Sources */,
+				019CAA30FAFD747187075963A5F9F606 /* DatabaseManager.swift in Sources */,
+				019CAA30FAFE793F8B8B7AFBD64C8F35 /* ContentView.swift in Sources */,
+				019CAA30FAFF79FD88767ECC3E8BFA9C /* MasterPasswordView.swift in Sources */,
+				019CAA30FB00767585793EBE39546BDA /* TOTPListView.swift in Sources */,
+				019CAA30FB01798F8F6B5EB3D65C2FA9 /* TOTPRowView.swift in Sources */,
+				019CAA30FB0275EF8B608C3502143248 /* AddEntryView.swift in Sources */,
+				019CAA30FB0375228061876F285EB347 /* EditEntryView.swift in Sources */,
+				019CAA30FB0474D081C0B8A943CB329A /* SettingsView.swift in Sources */,
+				019CAA30FB05779B84D256E660AA2229 /* ExportImportView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		019CAA30FACF72E184AFD81A2EE9FFEB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				019CAA30FB097103825145877FC0B4B6 /* TOTPEngineTests.swift in Sources */,
+				019CAA30FB0A7DD48B6BA69D672FE145 /* AESCryptoTests.swift in Sources */,
+				019CAA30FB0B751180109DBE69B4810E /* MasterKeyChangeTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		019CAA30FADC74B282432827F3E09876 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 019CAA30FAC874A18809DADB5B9FAF77 /* macOS-Authenticator */;
+			targetProxy = 019CAA30FADB7B9288300EA3B494EF0F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		019CAA30FAD47497848BBD85A6D21749 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 26.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		019CAA30FAD57D9A8718357043BC1FA5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 26.0;
+				SDKROOT = macosx;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		019CAA30FAD6763381CBDC570C41C345 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "macOS-Authenticator/macOS-Authenticator.entitlements";
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
+				DEVELOPMENT_TEAM = V63CS7AA25;
+				ENABLE_HARDENED_RUNTIME = NO;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = "macOS-Authenticator/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = Authenticator;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 26.0;
+				MARKETING_VERSION = 1.0.0;
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-lsqlite3",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.desmg.macos.authenticator;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		019CAA30FAD871838B0592B21243ABDA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "macOS-Authenticator/macOS-Authenticator.entitlements";
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
+				DEVELOPMENT_TEAM = V63CS7AA25;
+				ENABLE_HARDENED_RUNTIME = NO;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = "macOS-Authenticator/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = Authenticator;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 26.0;
+				MARKETING_VERSION = 1.0.0;
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-lsqlite3",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.desmg.macos.authenticator;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		019CAA30FAD97ECC80AC55276E379291 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = arm64;
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/macOS-Authenticator.app/Contents/MacOS/macOS-Authenticator";
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
+				DEVELOPMENT_TEAM = "";
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 26.0;
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.desmg.macos.authenticator.tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUNDLE_LOADER)";
+			};
+			name = Debug;
+		};
+		019CAA30FADA79D286651A759FFA3135 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = arm64;
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/macOS-Authenticator.app/Contents/MacOS/macOS-Authenticator";
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
+				DEVELOPMENT_TEAM = "";
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 26.0;
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.desmg.macos.authenticator.tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUNDLE_LOADER)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		019CAA30FAD176908EAD84BC01F9ED42 /* Build configuration list for PBXProject "macOS-Authenticator" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				019CAA30FAD47497848BBD85A6D21749 /* Debug */,
+				019CAA30FAD57D9A8718357043BC1FA5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		019CAA30FAD27C4A8BF0A50DE6170EC1 /* Build configuration list for PBXNativeTarget "macOS-Authenticator" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				019CAA30FAD6763381CBDC570C41C345 /* Debug */,
+				019CAA30FAD871838B0592B21243ABDA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		019CAA30FAD3766A868967600EF39D27 /* Build configuration list for PBXNativeTarget "macOS-AuthenticatorTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				019CAA30FAD97ECC80AC55276E379291 /* Debug */,
+				019CAA30FADA79D286651A759FFA3135 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 019CAA30FABA736F8A0F9146671FD9E4 /* Project object */;
+}
